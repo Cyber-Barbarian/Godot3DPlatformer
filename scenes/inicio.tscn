@@ -1,17 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://cswc3n3f2jjh4"]
+[gd_scene load_steps=5 format=3 uid="uid://cswc3n3f2jjh4"]
 
 [ext_resource type="PackedScene" uid="uid://blaawpifc1ucp" path="res://scenes/crate.tscn" id="1_lmp3f"]
+[ext_resource type="MeshLibrary" uid="uid://du7s76wihnxg1" path="res://scenes/objects/MeshLibrary001/MeshLibrary001.tres" id="2_ncnj3"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_hgoab"]
 size = Vector2(20, 20)
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_jnmka"]
-data = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, 10, -10, 0, -10, 10, 0, -10)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_11xiy"]
+points = PackedVector3Array(-10, 0, -10, -10, 0, 10, 10, 0, -10, 10, 0, 10)
 
 [node name="Node3D" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 9.12074, 14.4374)
+current = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.92685, 0.375432, 0, -0.375432, 0.92685, 0, 8.43209, 10)
@@ -21,18 +23,26 @@ sky_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.0549, 0)
 
 [node name="crate2" parent="." instance=ExtResource("1_lmp3f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.89914, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.243263, 6.89914, 0)
 
 [node name="crate3" parent="." instance=ExtResource("1_lmp3f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.19776, 0)
 
 [node name="crate4" parent="." instance=ExtResource("1_lmp3f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.38141, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.99918, 7.41734, 0)
 
 [node name="GroundStaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="GroundStaticBody3D"]
 mesh = SubResource("PlaneMesh_hgoab")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="GroundStaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_jnmka")
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="GroundStaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_11xiy")
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("2_ncnj3")
+cell_size = Vector3(1.8, 1, 1.8)
+data = {
+"cells": PackedInt32Array(65529, 65535, 1441805, 65529, 0, 1441805, 65530, 65535, 1441805, 65530, 0, 1441805, 65531, 65535, 1441805, 65531, 0, 1441805, 65532, 65535, 1441805, 65532, 0, 1441805, 65533, 65535, 1441805, 65533, 0, 1441805, 65534, 65535, 1441805, 65534, 0, 1441805, 65535, 65535, 1441805, 65535, 0, 1441805, 0, 65535, 1441805, 0, 0, 1441805, 1, 65535, 1441805, 1, 0, 1441805, 2, 65535, 1441805, 2, 0, 1441805, 3, 65535, 1441805, 3, 0, 1441805, 4, 65535, 1441805, 4, 0, 1441805, 5, 65535, 1441805, 5, 0, 1441805, 6, 65535, 1441805, 6, 0, 1441805, 7, 65535, 1441805, 7, 0, 1441805, 8, 65535, 1441805, 8, 0, 1441805, 9, 65535, 1441805, 9, 0, 1441805, 65528, 0, 1441800, 65527, 0, 1441800, 65526, 0, 1441800, 196607, 0, 1441803)
+}
+metadata/_editor_floor_ = Vector3(0, 2, 0)

@@ -1,0 +1,49 @@
+[gd_scene load_steps=16 format=3 uid="uid://cdxt0edr48hdg"]
+
+[ext_resource type="PackedScene" uid="uid://bowkjvqteflwd" path="res://scenes/objects/MeshLibrary001/block_grass_corner_low_2.tscn" id="1_xbuen"]
+[ext_resource type="PackedScene" uid="uid://dwn4p6hpdx6bd" path="res://scenes/objects/MeshLibrary001/block_grass_large.tscn" id="2_vu22p"]
+[ext_resource type="PackedScene" uid="uid://pe3n1078txto" path="res://scenes/objects/MeshLibrary001/block_grass_large_slope.tscn" id="3_c3mt8"]
+[ext_resource type="PackedScene" uid="uid://phmsy1hurqjg" path="res://scenes/objects/MeshLibrary001/block_grass_large_slope_narrow.tscn" id="4_e7ve1"]
+[ext_resource type="PackedScene" uid="uid://b3v57f3ihfhnx" path="res://scenes/objects/MeshLibrary001/block_grass_large_slope_steep.tscn" id="5_hmoum"]
+[ext_resource type="PackedScene" uid="uid://d3tv7a42t3rwr" path="res://scenes/objects/MeshLibrary001/block_grass_large_slope_steep_narrow.tscn" id="6_ygu4h"]
+[ext_resource type="PackedScene" uid="uid://bc8o3fj3pdo6" path="res://scenes/objects/MeshLibrary001/block_grass_large_tall.tscn" id="7_4edfm"]
+[ext_resource type="PackedScene" uid="uid://cnh0q1en173wj" path="res://scenes/objects/MeshLibrary001/block_grass_low_large.tscn" id="8_tem28"]
+[ext_resource type="PackedScene" uid="uid://bansmgqmducn6" path="res://scenes/objects/MeshLibrary001/block_grass_overhang_large.tscn" id="9_d8or4"]
+[ext_resource type="PackedScene" uid="uid://6lok8xp365m0" path="res://scenes/objects/MeshLibrary001/block_grass_overhang_large_slope.tscn" id="10_sjhnb"]
+[ext_resource type="PackedScene" uid="uid://dvnbhk60t408i" path="res://scenes/objects/MeshLibrary001/block_grass_overhang_large_slope_narrow.tscn" id="11_j7bkm"]
+[ext_resource type="PackedScene" uid="uid://ck5axrymymkjo" path="res://scenes/objects/MeshLibrary001/block_grass_overhang_large_slope_steep.tscn" id="12_gap6i"]
+[ext_resource type="PackedScene" uid="uid://45s03xejns7r" path="res://scenes/objects/MeshLibrary001/block_grass_overhang_large_slope_steep_narrow.tscn" id="13_6i7uu"]
+[ext_resource type="PackedScene" uid="uid://b340brnuski8p" path="res://scenes/objects/MeshLibrary001/block_grass_overhang_large_tall.tscn" id="14_qx1r2"]
+[ext_resource type="PackedScene" uid="uid://d07uhqqwqsdhk" path="res://scenes/objects/MeshLibrary001/block_grass_overhang_low_large.tscn" id="15_q62vd"]
+
+[node name="MeshLibrary001" type="Node3D"]
+
+[node name="block-grass-corner-low" parent="." instance=ExtResource("1_xbuen")]
+
+[node name="block-grass-large" parent="." instance=ExtResource("2_vu22p")]
+
+[node name="block-grass-large-slope" parent="." instance=ExtResource("3_c3mt8")]
+
+[node name="block-grass-large-slope-narrow" parent="." instance=ExtResource("4_e7ve1")]
+
+[node name="block-grass-large-slope-steep" parent="." instance=ExtResource("5_hmoum")]
+
+[node name="block-grass-large-slope-steep-narrow" parent="." instance=ExtResource("6_ygu4h")]
+
+[node name="block-grass-large-tall" parent="." instance=ExtResource("7_4edfm")]
+
+[node name="block-grass-low-large" parent="." instance=ExtResource("8_tem28")]
+
+[node name="block-grass-overhang-large" parent="." instance=ExtResource("9_d8or4")]
+
+[node name="block-grass-overhang-large-slope" parent="." instance=ExtResource("10_sjhnb")]
+
+[node name="block-grass-overhang-large-slope-narrow" parent="." instance=ExtResource("11_j7bkm")]
+
+[node name="block-grass-overhang-large-slope-steep" parent="." instance=ExtResource("12_gap6i")]
+
+[node name="block-grass-overhang-large-slope-steep-narrow" parent="." instance=ExtResource("13_6i7uu")]
+
+[node name="block-grass-overhang-large-tall" parent="." instance=ExtResource("14_qx1r2")]
+
+[node name="block-grass-overhang-low-large" parent="." instance=ExtResource("15_q62vd")]

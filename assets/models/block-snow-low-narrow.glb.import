@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/block-snow-low-narrow.glb-f4bc1a0668e85890cec
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="Node3D"
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0

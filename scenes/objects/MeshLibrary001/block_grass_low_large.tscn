@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnh0q1en173wj"]
+
+[ext_resource type="PackedScene" uid="uid://s62e2bbtv35s" path="res://assets/models/block-grass-low-large.glb" id="1_tud5h"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_svevi"]
+points = PackedVector3Array(-0.75369, 0.374951, -1.04106, -0.72638, 0.5, -1.0001, 0.753487, 0.374951, -1.04106, -0.72638, 0, -1.0001, -0.957093, 0.374951, -0.957093, -0.919999, 0.5, -0.919999, 0.726176, 0.5, -1.0001, 0.726176, 0, -1.0001, 0.956685, 0.374951, -0.957093, -0.919999, 0, -0.919999, -1.0001, 0, -0.72638, -1.04106, 0.374951, -0.75369, -1.0001, 0.5, -0.72638, 0.919592, 0.5, -0.919999, 0.919592, 0, -0.919999, 0.999893, 0.5, -0.72638, 1.04086, 0.374951, -0.75369, 0.999893, 0, -0.72638, -1.0001, 0, 0.726176, -1.04106, 0.374951, 0.753486, -1.0001, 0.5, 0.726176, 0.999893, 0.5, 0.726176, 1.04086, 0.374951, 0.753486, 0.999893, 0, 0.726176, -0.957093, 0.374951, 0.956685, -0.919999, 0, 0.919592, -0.919999, 0.5, 0.919592, 0.919592, 0.5, 0.919592, 0.956685, 0.374951, 0.956685, 0.919592, 0, 0.919592, -0.75369, 0.374951, 1.04106, -0.72638, 0, 0.999893, -0.72638, 0.5, 0.999893, 0.726176, 0.5, 0.999893, 0.753487, 0.374951, 1.04106, 0.726176, 0, 0.999893)
+
+[node name="block-grass-low-large" instance=ExtResource("1_tud5h")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="block-grass-low-large" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-low-large/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_svevi")

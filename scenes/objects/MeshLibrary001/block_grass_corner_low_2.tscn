@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bowkjvqteflwd"]
+
+[ext_resource type="PackedScene" uid="uid://5k7ueuim8k7l" path="res://assets/models/block-grass-corner-low.glb" id="1_0dg51"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wrxsn"]
+points = PackedVector3Array(-0.226142, 0.374951, -0.527218, -0.205603, 0, -0.479327, -0.439073, 0.374951, -0.439073, -0.205603, 0.5, -0.479327, 0.271557, 0.374951, -0.527218, -0.399129, 0, -0.399129, 0.246888, 0, -0.479327, -0.479327, 0, -0.205603, -0.527218, 0.374951, -0.226142, -0.479327, 0.5, -0.205603, -0.399129, 0.5, -0.399129, 0.246888, 0.5, -0.479327, 0.484488, 0.374951, -0.439073, 0.440518, 0, -0.399129, -0.479327, 0, 0.246888, -0.527218, 0.374951, 0.271557, -0.479327, 0.5, 0.246888, 0.440518, 0.5, -0.399129, 0.527218, 0.374951, -0.336169, 0.479224, 0, -0.305617, -0.439073, 0.374951, 0.484488, -0.399129, 0, 0.440518, -0.399129, 0.5, 0.440518, 0.479224, 0.5, -0.305617, 0.444131, 0.5, -0.129018, 0.488513, 0.374951, -0.14192, 0.444131, 0, -0.129018, -0.336169, 0.374951, 0.527218, -0.305617, 0, 0.479224, -0.305617, 0.5, 0.479224, -0.129018, 0.5, 0.444131, -0.14192, 0.374951, 0.488513, -0.129018, 0, 0.444131)
+
+[node name="block-grass-corner-low" instance=ExtResource("1_0dg51")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="block-grass-corner-low" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="block-grass-corner-low/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_wrxsn")

@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/block-moving-large.glb-b110c5a83440e01a0be8ca
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="Node3D"
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
