@@ -53,3 +53,38 @@ https://www.youtube.com/watch?v=JxbnStn-BIY
 - shift e select pode selecionar uma grande área e ctrl f a preencher
 -para rotacionar o bloco nos eixos x, y e z podemos usar a,s,e d
 *****
+
+
+# criando o player
+- para criaar o player usamos CharacterBody3D em nova cena
+- adicionamos 2 mesh instance (um pro corpo e outro para direção) e um colision shape
+- para o body mesh vamos usar um capsule mesh, alinhat no euxo y e colocar a escala em 0.5
+- IMPORTANTE: para o colision sha´pe usamos um simples capsule shape. Se usarmos a mesma tecnica que usamos para o terreno a engine vei travar pois entesde o player como kinematic body e static body ao mesmo tempo
+- posicionamos de forma que a base fique em 0.5
+- criamos um mesh instance prismático em directionmeshinstance para apontar a frente, redimensionamos e encaixamos
+- pintamos um mesh de cada cor para dar destaque (inspetor, material, new standard material)
+- importamos um script e adicionmos uma função para rotacionar de acordo com o mouse
+- temos agora um problema: ao girar estamos acessando o espaço global do personagem, o que causa conflitos de movimento. quero acessar o espaço local
+- para resolver isso recorremos a transform.basis e ajustamos os valores do VEC3 default no código
+- adicionamos uma câmera nas costas do player
+
+#importando o asset de player
+- vamos acessar o asset do kay kit (https://opengameart.org/content/kaykit-character-animations)
+- em assets vamos abrir a pasta animations>gltf>KayKit_AnimatedCharacter 
+- vamos primeiro clicar 2 vezes e abrir , ir na animação idle e ativar o loop
+- vamos reimportar,  abrir como herdada e salvar a cena com o nome de animations
+- o prototype pete tem as animações todas prontas 
+- vamos clicar em nossa cena de animação e limpar herança. após isso vamos precisar qcriar os nós de ossos no skeleton
+- vamos criar 6 one atatchments e nomear conforme está na animação
+- baixamos o dungeon pack (https://opengameart.org/content/kaykit-dungeon-pack-10)
+- de lá importamos os modelos de character mas so a pasta gltf
+- vamos pegar então um dos personagens, abrir como cena herdada e salvar como newPlayer
+- também iremos limpar a herança
+- vamos arrastar a cena animations como um nó filho da nossa cena newPlayer
+- nosso "pete" sobrescreveu, mas não tem problema. 
+- no nó importado clicamos com o direito e vamos em editable children
+- para cada mesh do nosso player arrastamos para um bone de nossa animação
+- em seguida vamos esconder nosso prototypepete e vemos que as animações foram substituídas
+- para encaixar armas nos slots de armas, basta procurar elas nos modelos e arrastar para a cena, como cena filha do slot
+- ajustamos o escudo e a espada nso slot e alteramos os deslocamentos e ângulos dos mesmos
+- importamos nosso newplayer pra dentro do nosso player como cena filha e lá ajeitamos altura e rotação
